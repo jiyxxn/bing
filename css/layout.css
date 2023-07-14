@@ -1,0 +1,111 @@
+/* fonts */
+
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+/* 빙그레체 */
+@font-face {
+  font-family: 'Binggrae';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Binggrae-Two';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Binggrae-Bold';
+  src: url(../font/Binggrae-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* NotoSansKR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* common */
+body {
+  font-family: 'Poppins','Noto Sans KR', sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.09em;
+  color: #1f1f1f;
+}
+a, a:hover {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+/* layout */
+#wrap {
+  width: 100%;
+
+}
+
+  #header {
+    width: 100%;
+    height: 146px;
+    z-index: 40;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: all 0.4s ease;
+  }
+
+  #header.active {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03); 
+  }
+
+  .header_wrap {
+    width: 100%;
+    height: 146px;
+    overflow: hidden;
+  }
+  .header_inner {
+    width: 100%;
+    height: 0px;
+    border-radius: 0 0 100px 100px;
+    box-shadow: 0px 5px 10px -1px #33333320;
+    position: absolute;
+    background-color: #fff;
+    transition: height 0.3s linear 0s;    
+    z-index: 2;
+  }
+    ul.topLink {
+      width: 100%;
+      height: 30px;
+      padding: 0 80px;
+      border-bottom: solid 1px #e6dcdd;
+      box-sizing: border-box;
+    }
+    div.header_bottom {
+      width: 100%;
+      height: 116px;
+      padding: 0 80px;
+      box-sizing: border-box;
+      z-index: 40;
+    }
+
+  section.banner {
+    position: relative;
+    width: 100%;
+    height: 795px;
+    overflow: hidden;
+  }
+
+main#container {
+  position: relative;
+  width: 100%;
+  /* border: solid 1px red; */
+}
+
+div.container_inner {
+  width: 1310px;
+  margin: 200px auto 200px auto;
+}

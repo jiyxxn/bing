@@ -1,0 +1,102 @@
+/* footer */
+#footer {
+  position: relative;
+  width: 100%;
+  height: 387px;
+  box-sizing: border-box;
+  padding: 38px 49px 22px;
+  background: #1b1b1b;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer > div > ul {
+  display: flex;
+}
+#footer > div > ul > li > a {
+  color: rgba(255, 255, 255, 0.3);
+}
+#footer > div > ul:first-of-type {
+  display: flex;
+}
+#footer > div > ul > li {
+  margin-left :10px;
+}
+#footer > div > ul > li:first-child {
+  margin-left: 0;
+}
+#footer > address {
+  margin-top: 35px;
+  display: flex;
+  flex-flow: column;
+  font-size: 17px;
+  line-height: 1;
+}
+#footer > address > span:first-child {
+  margin-bottom: 15px;
+}
+
+p.copyright {
+  margin-top: 135px;
+  font-size: 14px;
+  letter-spacing: -0.15px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+ul.sns {
+  display: flex;
+  position: absolute;
+  top: 284px;
+  left: 1406px;
+}
+
+ul.sns > li > a {
+  display: block;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.36), inset 0px 4px 10.8px 2.2px rgba(73, 73, 73, 0.11);
+  border-radius: 50%;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+ul.sns > li:first-child > a {
+  background: #1b1b1b url(../images/footer_sns04.png) no-repeat 50% 50%;
+}
+ul.sns > li:nth-child(2) > a {
+  background: #1b1b1b url(../images/footer_sns01.png) no-repeat 50% 50%;
+}
+ul.sns > li:nth-child(3) > a {
+  background: #1b1b1b url(../images/footer_sns02.png) no-repeat 50% 50%;
+}
+ul.sns > li:nth-child(4) > a {
+  background:#1b1b1b  url(../images/footer_sns03.png) no-repeat 50% 50%;
+}
+
+
+/* 탑버튼 */
+.btn_top > a {
+  position: fixed;
+  display: block;
+  bottom: 80px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #000 url(../images/fix_arrow.png) no-repeat 50% 50%;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.btn_top > a.on {
+  background: #000 url(../images/fix_arrow.png) no-repeat 50% 50%;
+  -ms-transform: rotate(180deg); /*IE 9 이상에서 사용*/
+  -webkit-transform: rotate(180deg); /* 사파리, 크롬, 오페라 브라우저 사용*/
+  transform: rotate(180deg);
+}

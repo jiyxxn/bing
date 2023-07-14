@@ -1,0 +1,300 @@
+/* header */
+ul.topLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+ul.topLink > li {
+  margin-left: 15px;
+}
+
+ul.topLink > li a {
+  display: block;
+  padding-right: 20px;
+  background: url(../images/link_arrow02.png) no-repeat 98% 50%;
+}
+
+/* 구매포털시스템, 인재채용 사이 세로바 */
+ul.topLink > li:first-child::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 153px;
+  width: 1px;
+  height: 15px;
+  background-color: #eee;
+}
+
+.header_bottom {
+  display: flex;
+  align-items: center;
+}
+
+/* javascript header_bottom 밑 hover border */
+div.header_bottom::after {
+  content:"";
+  position: absolute;
+  left: 0;
+  top: 146px;
+  width: 100%;
+  height: 1px;
+  background: #e6dcdd;
+  opacity: 0;
+  z-index: 50;
+}
+
+nav.gnb {
+  margin: 0 auto;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s;
+  /* z-index: 39; */
+}
+
+nav.gnb > ul {
+  width: 976px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+nav.gnb > ul > li {
+  position: relative;
+  font-size: 19px;
+  padding: 50px 85px 50px 0;
+  /* background: blue; */
+}
+
+/* 메인 메뉴 호버 텍스트 컬러 변경 효과 */
+nav.gnb > ul > li:hover > a {
+  position: relative;
+  color: #e0462e;
+  transition: all 0.2s ease;
+}
+
+/* 메인 메뉴 텍스트 옆 동그라미 호버효과 */
+nav.gnb > ul > li:hover > a::before {
+  content: "";
+  display: block;
+  clear: both;
+  background-color: #e0462e;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  border-radius: 50%;
+}
+
+/* 메인 메뉴 호버 밑줄 효과 */
+nav.gnb > ul > li:hover > a::after {
+  content: "";
+  display: block;
+  clear:both;
+  width: 100%;
+  height: 2px;
+  background-color: #e0462e;
+  position: absolute;
+  top: 71px;
+  left: 0;
+}
+
+/* 서브메뉴 */
+nav.gnb > ul > li > ul {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0px;
+  /* 서브메뉴 숨기기 */
+  /* display: none; */
+  line-height: 30px;
+  padding-top: 50px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: scaleY(0);
+  transition-delay: 0s;
+  transform-origin: top;
+}
+
+nav.gnb > ul > li > ul.on {
+  transform: scaleY(1);
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition: opacity 0.7s ease-in;
+}
+
+nav.gnb > ul > li > ul > li > a {
+  position: relative;
+  font-size: 18px;
+  display: block;
+  /* width: 150px; */
+  padding-bottom: 15px;
+  /* 라인하이트로 안한 이유 : 두 줄짜리 텍스트가 있음 */
+  /* line-height: 45px; */
+  /* background-color: blue; */
+}
+
+nav.gnb > ul > li > ul > li > a:hover {
+  color: #e0462e;
+  transition: all 0.2s ease;
+}
+nav.gnbActive {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: opacity 0.1s;
+}
+nav.gnbActive > ul {
+  display: flex;
+}
+nav.gnbActive a {
+  display: block;
+  transition: all 0.2s ease;
+}
+nav.gnbActive > ul > li {
+  position: relative;
+  top: 0;
+  box-sizing: border-box;
+  width: 255px;
+  height: 489px;
+  border-radius: 30px;
+  border: solid 1px rgba(224, 223, 226, 0.6);
+  padding: 50px 30px;
+  background-color: #fff;
+  /* transition: transform 0.6s; */
+  margin-right: 10px;
+  transition: top 0.3s ease-in-out;
+}
+nav.gnbActive > ul > li > a{
+  font-family: Binggrae-Bold;
+  font-size: 32px;
+}
+nav.gnbActive > ul > li:last-child {
+  margin-right: 0;
+}
+nav.gnbActive > ul > li > ul {
+  margin-top: 35px;
+  font-size: 18px;
+  line-height: 35px;
+}
+nav.gnbActive > ul > li > ul > li > ul > li > a {
+  color: #ACACAC;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: -0.6px;
+}
+/* hover */
+nav.gnbActive > ul > li:hover {
+  top: -15px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.09); 
+}
+nav.gnbActive > ul > li:hover > a {
+  position: relative;
+  color: #e0462e;
+}
+nav.gnbActive > ul > li > ul > li:hover > a {
+  color: #e0462e;
+}
+
+/* nav 우측 */
+/* language */
+.language {
+  position: relative;
+}
+.language > span {
+  display: inline-block;
+  width: 40px;
+  background:url(../images/lang_btn.png) no-repeat 100% 50%;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* language 서브 */
+.language > ul {
+  /* visibility: hidden; */
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 55px;
+  /* height: 0px; */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 7px 2px #33333320;
+  text-align: center;
+  padding: 10px 0;
+  transition: transform 0.3s cubic-bezier(.62,.51,.64,.51), opacity 0.3s;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.language > ul > li {
+  margin-bottom: 5px;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(.62,.51,.64,.51);
+}
+.language > ul > li > a {
+  font-size: 16px;
+  font-weight: 700;
+}
+.language > ul.active {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.language > ul.active > li {
+  opacity: 1;
+}
+/* hamburger */
+.hamburger {
+  margin-left: 40px;
+}
+.hamburger a {
+  width: 26px;
+  height: 23px;
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../images/btn_menu.png) no-repeat 0 0;
+  transition: background 0.5s ease-in;
+}
+
+/* nav.gnb javascript */
+body.on {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+div.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+div.bg.on {
+  opacity: 1;
+  visibility: visible;
+  background: #fff url(../images/pc_ham_bg.png) no-repeat 100% -80px;
+  transition: opacity 0.5s;
+}
+nav.gnb.on {
+  visibility: hidden;
+  opacity: 0;
+  transition: background 0.1s;
+}
+nav.gnbActive.on {
+  visibility: visible;
+  opacity: 1;
+  z-index: 41;
+}
+div.hamburger.on > a {
+  background: url(../images/ham_close.png) no-repeat 0 0;
+  background-size: contain;
+}

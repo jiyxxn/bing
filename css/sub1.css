@@ -1,0 +1,402 @@
+.header_bottom {
+  border: solid 1px #eee;
+  transition: border 0.3s
+}
+#header.active .header_bottom {
+  border: solid 1px transparent;
+}
+
+/* spot */
+div.spot {
+  width: 100%;
+  /* border: solid 1px red; */
+}
+div.spot > ul.path {
+  line-height: 1;
+  opacity: 0.4;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 34px;
+}
+div.spot > ul > li, ul.path > li::before {
+  padding-right: 10px;
+}
+
+div.spot > ul > li > img {
+  vertical-align: top;
+}
+
+div.spot > ul.path > li:nth-of-type(2):before, div.spot > ul.path > li:nth-of-type(3):before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 10px;
+  background: url(../images_sub1/btn_icon_brec_arrow.png) no-repeat 0 0;
+}
+
+div.spot > h2 {
+  font-family: 'Binggrae-Bold';
+  font-size: 58px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -2.9px;
+  margin-top: 15px;
+  margin-bottom: 37px;
+}
+
+div.spot > ul:last-of-type {
+  display: flex;
+  
+}
+div.spot > ul:last-of-type > li {}
+div.spot > ul:last-of-type > li > a {
+  width: 180px;
+  height: 43px;
+  display: block;
+  line-height: 43px;
+  text-align: center;
+  border-radius: 30px;
+  background: #fbfbfb;
+  font-size: 16px;
+}
+div.spot > ul:last-of-type > li:hover > a, div.spot > ul:last-of-type > li.on > a {
+  color: #fff;
+  background: linear-gradient(to top, #ed1c24, #e0462e);
+  box-shadow: inset 0px 5px 10px 0 rgba(53, 53, 53, 0.11);
+}
+
+/* //spot */
+
+/* 재무정보 */
+div.finance_info {
+  width: 100%;
+  margin-top: 105px;
+  /* border: solid 1px red; */
+}
+
+div.finance_info > h3, div.finance_info > h4 {
+  font-family: Binggrae-Bold;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -1.6px;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+div.finance_info > ul {
+  width: 308px;
+  height: 43px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 5px 8px 0 rgba(53, 53, 53, 0.11);
+  display: flex;
+  margin: 15px auto 60px;
+  align-items: center;
+  justify-content: center;
+}
+div.finance_info > ul > li {
+  position: relative;
+}
+div.finance_info > ul > li a {
+  color: #1f1f1f80;
+  font-size: 16px;
+  font-weight: 600;
+}
+div.finance_info > ul > li.on a {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 600;
+}
+div.finance_info > ul > li:first-child > a {
+  margin-right: 40px;
+}
+div.finance_info > ul > li:last-child > a {
+  margin-left: 40px;
+}
+
+div.finance_info > ul > li:last-child > a::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 15px;
+  background: #ccc;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* margin-right: 10px; */
+}
+div.financeBox {
+  position: relative;
+}
+div.financeBox > span {
+  position: absolute;
+  top: -20px;
+  right: 35px;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.financeBox::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div.finance_data {
+  width: 419px;
+  border-radius: 30px;
+  margin-right: 13px;
+  float: left;
+  margin-top: 38px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 0;
+}
+div.finance_data:first-of-type {
+  background: #f3f6e0;
+}
+div.finance_data:nth-of-type(2){
+  background: #eff6fa;
+}
+div.finance_data:nth-of-type(3){
+  background: #fcf4e5;
+}
+
+div.finance_data > h5 {
+  font-size: 16px;
+  letter-spacing: -0.78px;
+}
+div.finance_data > p {
+  /* display: flex;
+  align-items: center; */
+}
+div.finance_data > p > span:first-child {
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  margin-right: 15px;
+}
+div.finance_data > p > span:nth-child(2) {
+  font-size: 53px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+div.finance_data > p {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+div.finance_data > ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  width: 80%;
+  height: 170px;
+  border-radius: 20px;
+  padding: 25px 0;
+  margin-top: 10px;
+}
+div.finance_data > ul::after {
+  content: "";
+  display: block;
+  position: absolute;
+  clear: both;
+  width: 80%;
+  height: 1px;
+  background: #e0e0e0;
+  bottom: 51px;
+}
+div.finance_data:first-of-type > p > span:first-child {
+  background: #fff url(../images_sub1/icon_finance01.png) no-repeat center;
+}
+div.finance_data:nth-of-type(2) > p > span:first-child {
+  background: #fff url(../images_sub1/icon_finance02.png) no-repeat center;
+}
+div.finance_data:nth-of-type(3) > p > span:first-child {
+  background: #fff url(../images_sub1/icon_finance03.png) no-repeat center;
+}
+div.finance_data > ul > li {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-right: 20px;
+}
+div.finance_data > ul > li:last-child{
+  margin-right: 0;
+}
+
+div.finance_data > ul > li > span.figure {
+  display: inline-block;
+  border-radius: 18px;
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.05);
+  background: #fff;
+  font-size: 15px;
+  color: #e4392a;
+  width: 65px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+div.finance_data > ul > li > div.graph {
+  position: absolute;
+  width: 36px;
+  height: 83px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #e0e0e0;
+  border-radius: 30px 30px 0 0;
+  margin-top: 10px;
+  bottom: 27px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div.finance_data > ul > li > span:last-child {
+  display: block;
+  position: absolute;
+  top: 145px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #e0e0e0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+div.finance_data > ul > li:last-of-type > span:last-child{
+  color: #e4392a;
+}
+div.finance_data:first-of-type > ul > li > div.graph {
+  height: 83px;
+}
+div.finance_data:first-of-type > ul > li:last-child > div.graph {
+  height: 90px;
+  background: #e4392a;
+}
+
+div.finance_data:nth-of-type(2) > ul > li > div.graph {
+  height: 18px;
+}
+div.finance_data:nth-of-type(2) > ul > li:nth-child(2) > div.graph {
+  height: 22px;
+}
+div.finance_data:nth-of-type(2) > ul > li:nth-child(3) > div.graph {
+  height: 20px;
+  background: #e4392a;
+}
+div.finance_data:nth-of-type(3) > ul > li > div.graph {
+  height: 65px;
+}
+div.finance_data:nth-of-type(2) > ul > li:nth-child(2) > div.graph {
+  height: 58px;
+}
+div.finance_data:nth-of-type(3) > ul > li:nth-child(3) > div.graph {
+  height: 63px;
+  background: #e4392a;
+}
+
+/* 재무상태표 */
+div.container_inner > h4 {
+  font-family: Binggrae-Bold;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -1.6px;
+  color: #1f1f1f;
+  margin-top: 140px;
+}
+div.container_inner > span {
+  display: block;
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div.table_bs {
+  width: 1310px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  border: solid 1px #ececee;
+  /* box-shadow: 0 0 0 1px #ececee; border 역할로 사용 */
+  padding: 20px;
+  /* background: pink; */
+  box-sizing: border-box;
+
+}
+table {
+  width: 100%;
+  letter-spacing: -0.8px;
+}
+
+table > thead {
+  height: 73px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+table th, table tr {
+  text-align: center;
+  height: 40px;
+  padding: 20px 0;
+}
+table th {
+  font-size: 16px;
+}
+table tr {
+  border-bottom: solid 1px #e8e8e8;
+}
+table td {
+  font-size: 16px;
+}
+table > thead > tr, table > tfoot > tr:last-of-type {
+  border-bottom: 0;
+}
+
+table > thead th {
+  text-align: center;
+  background: #f9f9f9;
+  font-weight: 500;
+}
+table > thead th:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+table > thead th:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+table > tfoot > tr > th {
+  font-weight: 600;
+}
+table > tfoot > tr:first-of-type {
+  order: 3;
+}
+table > tfoot > tr:last-of-type {
+  order: 2;
+ }
+ table > tfoot > tr > td {
+  font-weight: 700;
+ }
+ div.container_inner > p:last-of-type{
+  position: relative;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 25px;
+  color: #8f8f8f;
+  letter-spacing: -0.8px;
+  font-weight: 300;
+ }
+ div.container_inner > p:last-of-type::before {
+  content: "*";
+  display: inline-block;
+  position: absolute;
+  left: -10px;
+ }
